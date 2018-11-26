@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <properties resource="generate.properties"/>
+
+    <!-- !!!! Driver Class Path !!!! -->
+    <classPathEntry
+            location="E://java//mysql-connector-java-5.1.34.jar"/>
+
+    <context id="context" targetRuntime="MyBatis3">
+
+        <!--<plugin type="org.mybatis.generator.plugins.CachePlugin">-->
+            <!--<property name="cache_type" value="me.aihe.cache.RedisCache" />-->
+        <!--</plugin>-->
+
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.VirtualPrimaryKeyPlugin"></plugin>
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <!-- !!!! Database Configurations !!!! -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="${url}"
+                        userId="${user}" password="${password}"/>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- !!!! Model Configurations !!!! -->
+        <javaModelGenerator targetPackage="com.huining.info.discount.domin" targetProject="${targetProject}">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+            <!--<property name="constructorBased" value="true" />-->
+        </javaModelGenerator>
+
+        <!-- !!!! Mapper XML Configurations !!!! -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="${sqlMaptargetProject}">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <!-- !!!! Mapper Interface Configurations !!!! -->
+        <javaClientGenerator targetPackage="com.huining.info.discount.dao" targetProject="${targetProject}" type="XMLMAPPER">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <!-- !!!! Table Configurations !!!! -->
+        <!--<table tableName="sh_admin_user" domainObjectName="AdminUser" enableCountByExample="true" enableDeleteByExample="true">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="sh_classify" domainObjectName="Classify" enableCountByExample="true">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_admin_role" domainObjectName="AdminRole">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_income_type" domainObjectName="IncomeType">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="sh_outcome_type" domainObjectName="OutcomeType">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_user_money" domainObjectName="UserMoney">-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_user_money_log" domainObjectName="UserMoneyLog">-->
+        <!--&lt;!&ndash;<property name="virtualKeyColumns" value="uid" />&ndash;&gt;-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_banner" domainObjectName="Banner">-->
+         <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="sh_goods" domainObjectName="Good">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="sh_goods_type" domainObjectName="GoodType">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="sh_rush_buy" domainObjectName="RushBuy">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="sh_signin" domainObjectName="Signin">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="sh_signin_reward" domainObjectName="SigninReward">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="sh_redpacket" domainObjectName="Redpacket">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_redpacket_log" domainObjectName="RedpacketLog">-->
+        <!--&lt;!&ndash;<generatedKey column="id" sqlStatement="MySql" />&ndash;&gt;-->
+        <!--</table>-->
+        <!--<table tableName="sh_sonshu_proxy" domainObjectName="SongshuProxy">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_test1" domainObjectName="Test1">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="sh_test2" domainObjectName="Test2">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_alimama" domainObjectName="Alimama">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="sh_withdrawals" domainObjectName="WithDrawals">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+        
+        <!--<table tableName="sh_hui_proxy" domainObjectName="HuixuanProxy">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="sh_user_hui" domainObjectName="UserHui">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="sh_taoke_detail" domainObjectName="TaokeDetail">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_hui_signin" domainObjectName="HuiSignin">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_rebate_order" domainObjectName="RebateOrder">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_sonshu_proxy" domainObjectName="SongshuProxy">-->
+
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="sh_shop_proxy" domainObjectName="ShopProxy" enableDeleteByExample="false">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_filed" domainObjectName="FieldGood">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_sub_classify" domainObjectName="SubClassify">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_goods" domainObjectName="Good" enableSelectByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="sh_invite_relation" domainObjectName="InviteRelation">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="sh_user_role" domainObjectName="UserRole" enableCountByExample="true">-->
+
+        <!--</table>-->
+        <!--<table tableName="sh_banner_shop" domainObjectName="BannerShop" enableSelectByExample="true">-->
+        <!--</table>-->
+        <!--<table tableName="sh_user" domainObjectName="User">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+
+        <table tableName="test" domainObjectName="Test"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
